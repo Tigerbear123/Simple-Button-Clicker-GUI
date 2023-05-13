@@ -1,0 +1,72 @@
+from tkinter import *
+import tkinter.messagebox as tsmg
+# This is a Python GUI application that allows the user to click on buttons and view certain messages when clicked
+# This displays a welcome message when clicked on by the user.
+def welcomeUser():
+    tsmg.showinfo("Welcome User","Hello, peeps! Click on any other button to see what message you get from each one!")
+# This displays all of the hobbies the program likes to do.
+def hobbies():
+    tsmg.showinfo ("Hobbies", "I like sports, reading books, playing video games, and collecting insects! What about you?")
+# This displays all of the favorite foods the program likes to eat. 
+def favoriteFood():
+    tsmg.showinfo ("Favorite Food", "I like pizza, spaghetti, chocolate, donuts, tapioca, and anything else a child might like! What are your favorite foods?")
+# This displays all of the TV shows the program likes to watch.
+def favoriteProgram():
+    tsmg.showinfo ("Favorite Programs", "I like watching good 'ole Western movies as well as watching anime. What are your favorite TV programs?")    
+# This displays the program's idea of an ideal vacation.
+def idealVacation():
+    tsmg.showinfo ("Ideal Vacation", "My idea of an ideal vacation is somewhere in a tropical place like Hawaii, where I can surf, swim, sunbathe, dance with the ladies, and all other fun stuff. What's your ideal vacation?")
+def exitGUI():
+    window.destroy()
+    
+# The dimensions of the window
+window =Tk()
+window.geometry("700x900")
+window.minsize(420,420)
+window.title("GUI Button Clicker")
+# Down below are the labels.
+# The label for "Welcome User"
+label1 = Label(window, text='Welcome User!', font=("Arial", 15))
+label1.pack(ipadx=15, ipady=10)
+label1.place(x=150, y=130)
+# The label for "Hobbies"
+label2 = Label(window, text='Hobbies That I Like To Do!', font=("Arial", 15))
+label2.pack(ipadx=15, ipady=10)
+label2.place(x=150, y=230)
+# The label for "Favorite Food"
+label3 = Label(window, text='The Food That I Like to Eat!', font=("Arial", 15))
+label3.pack(ipadx=15, ipady=10)
+label3.place(x=150, y=330)
+# The label for "Favorite Programs"
+label4 = Label(window, text='The Programs I Like to Watch!', font=("Arial", 15))
+label4.pack(ipadx=15, ipady=10)
+label4.place(x=150, y=430)
+# The label for "Ideal Vacation"
+label5 = Label(window, text='The Ideal Vacation for Me!', font=("Arial", 15))
+label5.pack(ipadx=15, ipady=10)
+label5.place(x=150, y=530)
+# The label for "Leaving Already?"
+label6 = Label(window, text='Leaving Already?', font=("Arial", 15))
+label6.pack(ipadx=15, ipady=10)
+label6.place(x=150, y=630)
+# Down below are the buttons.
+# The button for "Welcome User!"
+b1 = Button(window, text="Welcome User!", width=15, bg='red', fg='white', command=welcomeUser)
+b1.place(x=150, y=180)
+# The button for "Hobbies"
+b2 = Button(window, text="Hobbies", width=15, bg='red', fg='white', command=hobbies)
+b2.place(x=150, y=280)
+# The button for "Favorite Food"
+b3 = Button(window, text="Favorite Food", width=15, bg='red', fg='white', command=favoriteFood)
+b3.place(x=150, y=380)
+# The button for "Favorite Programs"
+b4 = Button(window, text="Favorite Programs", width=15, bg='red', fg='white', command=favoriteProgram)
+b4.place(x=150, y=480)
+# The button for "Ideal Vacation"
+b5 = Button(window, text="Ideal Vacation", width=15, bg='red', fg='white', command=idealVacation)
+b5.place(x=150, y=580)
+# The button for "Exit GUI"
+b6 = Button(window, text="Exit GUI", width=15, bg='red', fg='white', command=exitGUI)
+b6.place(x=150, y=680)
+window.mainloop()
+
